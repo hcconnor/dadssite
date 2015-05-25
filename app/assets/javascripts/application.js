@@ -20,6 +20,7 @@ $(document).ready(function() {
 		window.location.href = "/"
 	})
 	$("#home").click(function(){
+		// $("#home").attr("class","selectednav")
 		window.location.href = "/"
 	})
 	$("#videos").click(function(){
