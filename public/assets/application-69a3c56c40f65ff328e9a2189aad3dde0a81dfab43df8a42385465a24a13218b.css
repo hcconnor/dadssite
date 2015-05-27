@@ -1,0 +1,40 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+#header{
+	background-color: #66F;
+	height: 200px;
+	background-image: url(/assets/violinplaceholder-eaffad36fe9844b68cf2115c69aa46288731fb68ac147d7b651928a4ac506385.png);
+	/*background-image: url("app/assets/images/violin placeholder.png");*/
+	text-align: center;
+}
+#title{
+	display: inline-block;
+	position: relative;
+/*	width: 750px;
+	height: 200px;*/
+	margin: 0px auto; 
+	text-align: center;
+	font-size: 38px;
+	font-family: helvetica;
+	top:50%;
+	transform: translateY(-50%);
+	/*width:60%;*/
+}
+#title:hover{
+	background-color: rgba(253, 253, 253, 0.5);
+	cursor: pointer;
+}
