@@ -1,0 +1,112 @@
+.title{
+    font-size: 35px;
+    margin: 20px;
+}
+.body{
+    font-size: 20px;
+}
+#welcome{
+}
+#intro{
+}
+#practice-link{
+    margin: 10px;
+}
+#reasons ul{
+    display: inline-block;
+}
+#reasons li{
+    text-align: left;
+}
+#rates table, tr, th, td{
+    padding: 5px;
+    border-collapse: collapse;
+    border: 2px solid;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+body{
+	background-color: #c4c4ff;
+	text-align: center;
+	font-family: helvetica;
+}
+a{
+	cursor: auto;
+	color: blue;
+}
+a:visited{
+	color: #551A8B;
+}
+#header{
+	background-color: #66F;
+	height: 200px;
+	background-image: url(/assets/violinplaceholder-eaffad36fe9844b68cf2115c69aa46288731fb68ac147d7b651928a4ac506385.png);
+	/*background-image: url("app/assets/images/violin placeholder.png");*/
+	text-align: center;
+	position: relative;
+}
+#title{
+	display: inline-block;
+	position: relative;
+/*	width: 750px;
+	height: 200px;*/
+	margin: 0px auto; 
+	text-align: center;
+	font-size: 50px;
+	font-family: helvetica;
+	top:50%;
+	transform: translateY(-50%);
+	/*width:60%;*/
+}
+#title:hover{
+	background-color: rgba(253, 253, 253, 0.5);
+	cursor: pointer;
+}
+#navbar {
+	/*position: absolute;*/
+	bottom: 0;
+	text-align: center;
+}
+
+#navbar ul{
+	list-style: none;
+	background-color: #444;
+	/*text-align: center;*/
+	padding: 0;
+	margin: 0;
+	/*display: inline-block;*/
+}
+
+#navbar li{
+	transition: .3s background-color, .3s color;
+	padding: 2px 12px 2px 12px;
+	font-family: helvetica;
+	font-size: 1.2em;
+	line-height: 40px;
+	height: 40px;
+	color: #FFF;
+	border-bottom: 2px solid #888;
+	display: inline-block;
+}
+#navbar li:hover{
+	background-color: #005f5f;
+	cursor: pointer;
+}
+#navbar li:active{
+	background-color: #FFF;
+	color: #000;
+}
