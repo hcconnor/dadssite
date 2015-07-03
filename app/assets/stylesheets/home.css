@@ -1,0 +1,18 @@
+#welcome{
+    margin: 20px;
+    font-size: 35px;
+}
+#intro{
+    font-size: 20px;
+}
+#practice-link{
+    font-size: 20px;
+    margin: 10px;
+}
+#reasons ul{
+    font-size: 20px;
+    display: inline-block;
+}
+#reasons li{
+    text-align: left;
+}
