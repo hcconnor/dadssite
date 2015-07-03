@@ -19,4 +19,17 @@ $(document).ready(function() {
 	$("#title").click(function(){
 		window.location.href = "/"
 	})
+	$("#home").click(function(){
+		// $("#home").attr("class","selectednav")
+		window.location.href = "/"
+	})
+	$("#videos").click(function(){
+		window.location.href = "/videos"
+	})
+	$("#lesson").click(function(){
+		window.location.href = "/lessonschedule"
+	})
+	$("#mp").click(function(){
+		window.location.href = "/mp3files"
+	})
 })
