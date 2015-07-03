@@ -14,8 +14,7 @@
  *= require_self
  */
 body{
-	/*background-color: #c4c4ff;*/
-	background-color: #fdf7ef;
+	margin:0px;
 	text-align: center;
 	font-family: helvetica;
 }
@@ -29,7 +28,13 @@ a:visited{
 #header{
 	background-color: #66F;
 	height: 200px;
-	background-image: url(<%= asset_path 'violinplaceholder.png'%>);
+	background-image: url(<%= asset_path 'violin_header_00000.jpg'%>);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+ 	margin: 0 auto;
+ 	max-height: 300px;
+ 	max-width: 1920px;
 	/*background-image: url("app/assets/images/violin placeholder.png");*/
 	text-align: center;
 	position: relative;
@@ -45,16 +50,21 @@ a:visited{
 	font-family: helvetica;
 	top:50%;
 	transform: translateY(-50%);
+	color:white;
+	text-shadow: 3px 3px 10px black;
 	/*width:60%;*/
 }
 #title:hover{
-	background-color: rgba(253, 253, 253, 0.5);
+	/*background-color: rgba(253, 253, 253, 0.5);*/
 	cursor: pointer;
 }
 #navbar {
-	/*position: absolute;*/
+	/*position: fixed;*/
 	bottom: 0;
 	text-align: center;
+	box-shadow: 2px 4px 5px #888888;
+	height:45px;
+	z-index:1;
 }
 
 #navbar ul{
