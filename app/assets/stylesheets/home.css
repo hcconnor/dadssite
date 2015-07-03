@@ -1,18 +1,25 @@
-#welcome{
-    margin: 20px;
+.title{
     font-size: 35px;
+    margin: 20px;
+}
+.body{
+    font-size: 20px;
+}
+#welcome{
 }
 #intro{
-    font-size: 20px;
 }
 #practice-link{
-    font-size: 20px;
     margin: 10px;
 }
 #reasons ul{
-    font-size: 20px;
     display: inline-block;
 }
 #reasons li{
     text-align: left;
+}
+#rates table, tr, th, td{
+    padding: 5px;
+    border-collapse: collapse;
+    border: 2px solid;
 }
