@@ -11,9 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//= require turbolinks
 
 $(document).ready(function() {
 	$("#title").click(function(){
@@ -32,4 +33,31 @@ $(document).ready(function() {
 	$("#mp").click(function(){
 		window.location.href = "/mp3files"
 	})
+	$("#contact").click(function(){
+		window.location.href = "/contactme"
+	})
+	
+	var nav = $('#navbar');
+    var navHomeY = nav.offset().top;
+    var isFixed = false;
+    var $w = $(window);
+    $w.bind('scroll resize', function() { 
+        var scrollTop = $w.scrollTop();
+        var shouldBeFixed = scrollTop > navHomeY;
+        if (shouldBeFixed && !isFixed) {
+            nav.css({
+                position: 'fixed',
+                top: 0
+                
+            });
+            isFixed = true;
+        }
+        else if (!shouldBeFixed && isFixed)
+        {
+            nav.css({
+                position: 'static'
+            });
+            isFixed = false;
+        }
+    });
 })

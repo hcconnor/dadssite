@@ -13,10 +13,28 @@
  *= require_tree .
  *= require_self
  */
+body{
+	margin:0px;
+	text-align: center;
+	font-family: helvetica;
+}
+a{
+	cursor: auto;
+	color: blue;
+}
+a:visited{
+	color: #551A8B;
+}
 #header{
-	background-color: #66F;
+	background-color: brown;
 	height: 200px;
-	background-image: url(<%= asset_path 'violinplaceholder.png'%>);
+	background-image: url(<%= asset_path 'violin_header_00000.jpg'%>);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+ 	margin: 0 auto;
+ 	max-height: 300px;
+ 	max-width: 1920px;
 	/*background-image: url("app/assets/images/violin placeholder.png");*/
 	text-align: center;
 	position: relative;
@@ -28,20 +46,26 @@
 	height: 200px;*/
 	margin: 0px auto; 
 	text-align: center;
-	font-size: 38px;
+	font-size: 50px;
 	font-family: helvetica;
 	top:50%;
 	transform: translateY(-50%);
+	color:white;
+	text-shadow: 3px 3px 10px black;
 	/*width:60%;*/
 }
 #title:hover{
-	background-color: rgba(253, 253, 253, 0.5);
+	/*background-color: rgba(253, 253, 253, 0.5);*/
 	cursor: pointer;
 }
 #navbar {
-	/*position: absolute;*/
+	/*position: fixed;*/
+	width:100%;
 	bottom: 0;
 	text-align: center;
+	box-shadow: 2px 4px 5px darkgrey;
+	height:45px;
+	z-index:1;
 }
 
 #navbar ul{
