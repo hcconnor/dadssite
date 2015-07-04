@@ -1,1 +1,109 @@
-Home
+<script src = "https://maps.googleapis.com/maps/api/js">
+</script>
+<script>
+    var address1 = {lat:38.573845, lng:-121.478387}
+    var address2 = {lat:38.416454, lng:-121.526800}
+    var map1;
+    var map2;
+    function createMarker(coords, map, title){
+        var marker = new google.maps.Marker({
+            position: coords, map: map, title: title
+        })
+    }
+    function initialize(){
+        var mapoptions1 = {
+            zoom: 17, center: new google.maps.LatLng(address1.lat, address1.lng)  
+        }
+        var mapoptions2 = {
+            zoom: 17, center: new google.maps.LatLng(38.416454, -121.526800)
+        }
+        map1 = new google.maps.Map(document.getElementById("map-canvas1"),mapoptions1)
+        createMarker(address1, map1, "Pease Conservatory of Music")
+        var panooptions1 = {
+            position: address1,
+            pov: {heading: 200, pitch: 9}
+        }
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById("pano1"),panooptions1)
+        map1.setStreetView(panorama)
+        
+        map2 = new google.maps.Map(document.getElementById("map-canvas2"),mapoptions2)
+        createMarker(address2, map2, "Clarksburg Community Church")
+        var panooptions2 = {
+        position: address2,
+        pov: {heading: 10, pitch: 9}
+        }
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById("pano2"),panooptions2)
+        map2.setStreetView(panorama)
+    }
+    google.maps.event.addDomListener(window, "load", initialize)
+</script>
+
+<div id= "content">
+    <div id= "welcome" class = "title">
+        Welcome to Keith Connor's Strings Studio
+    </div>
+    <div id= "intro" class = "body">
+        Teaching violin, cello, and guitar lessons in the greater Sacramento / Elk Grove area. Offering over 15 years of instruction, students have the opportunity for individulaized lesson to achieve their personal music goals. Bothe studion and in-home options are available. *In-home lessons require an additional travel charge, which depends on mileage.*
+    </div>
+    <div id= "practice-link" class = "body">
+        <%= link_to "Click here for the MP3 practice files", mp3files_path %>
+    </div>
+    <!--<div id= "reasons" class = "body">-->
+    <!--    <ul>-->
+    <!--        <li>Individualized lessons encourage each student to attain their personal music goals</li>-->
+    <!--        <li>Students work on fun, musically instructive pieces</li>-->
+    <!--        <li>Over fifteen years of teaching experience</li>-->
+    <!--        <li>Studio and in-home lessons available</li>-->
+    <!--    </ul>-->
+    <!--</div>-->
+    <div id= "rate-title" class = "title">
+        Rates
+    </div>
+    <div id= "rates" class = "body">
+        <table align = "center">
+            <tr>
+                <th>Time</th>
+                <th>price per lesson</th>
+            </tr>
+            <tr>
+                <td>30 minutes</td>
+                <td>$25</td>
+            </tr>
+            <tr>
+                <td>45 minutes</td>
+                <td>$35</td>
+            </tr>
+            <tr>
+                <td>1 hour</td>
+                <td>$45</td>
+            </tr>
+        </table>
+    </div>
+    <div id = "ratesinfo" class = "body">
+        <p>Lessons are scheduled on a monthly basis - with payment due at the 1st lesson of each month.  No charge for skipped / missed lessons with at least two weeks notice.  For in-home lessons a travel charge is added to the above rate depending on mileage.</p>  
+        <p>I teach a small ensemble group open to students with an intermediate note reading ability. This group meets on Sundays at 2:30 for 1 hour and costs $10 per session.</p>
+    </div>
+    <div>
+        <br>
+    </div>
+    <div id = "locations" class = "body">
+        I teach at these locations:
+        <p>The Pease Conservatory on Sunday afternoons</p>
+        <p>2130 L Street,  Sacramento 95816</p>
+        <div id = "maps1">
+            <div id = "map-canvas1">
+            </div>
+            <div id = "pano1">
+            </div>            
+        </div>
+
+        <p>The Clarksburg Community Church; Mondays & Wednesdays.</p>
+        <p>52910 Netherlands Ave. Clarksburg 95612</p>
+        <div id = "maps2">
+            <div id = "map-canvas2">
+            </div>
+            <div id = "pano2">
+            </div>            
+        </div>
+    </div>
+</div>
