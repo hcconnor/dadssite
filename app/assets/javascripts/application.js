@@ -41,15 +41,14 @@ $(document).ready(function() {
     var navHomeY = nav.offset().top;
     var isFixed = false;
     var $w = $(window);
-    $w.scroll(function() {
+    $w.bind('scroll resize', function() { 
         var scrollTop = $w.scrollTop();
         var shouldBeFixed = scrollTop > navHomeY;
         if (shouldBeFixed && !isFixed) {
             nav.css({
                 position: 'fixed',
-                top: 0,
-                left: nav.offset().left,
-                width: nav.width()
+                top: 0
+                
             });
             isFixed = true;
         }
