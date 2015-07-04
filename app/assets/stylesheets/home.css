@@ -37,10 +37,14 @@
     width:50%;
     text-align:left;
 }
+<<<<<<< HEAD
 #lessonimage{
     position:absolute;
     left: 10px;
 }
+=======
+
+>>>>>>> lessonSchedule
 #locations{
     margin: auto;
     width: 50%;
