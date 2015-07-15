@@ -5,6 +5,45 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src = "https://maps.googleapis.com/maps/api/js">
+</script>
+<script>
+    var address1 = {lat:38.573845, lng:-121.478387}
+    var address2 = {lat:38.416454, lng:-121.526800}
+    var map1;
+    var map2;
+    function createMarker(coords, map, title){
+        var marker = new google.maps.Marker({
+            position: coords, map: map, title: title
+        })
+    }
+    function initialize(){
+        var mapoptions1 = {
+            zoom: 15, center: new google.maps.LatLng(address1.lat, address1.lng)  
+        }
+        var mapoptions2 = {
+            zoom: 12, center: new google.maps.LatLng(38.416454, -121.526800)
+        }
+        map1 = new google.maps.Map(document.getElementById("map-canvas1"),mapoptions1)
+        createMarker(address1, map1, "Pease Conservatory of Music")
+        var panooptions1 = {
+            position: address1,
+            pov: {heading: 200, pitch: 9}
+        }
+        // var panorama = new google.maps.StreetViewPanorama(document.getElementById("pano1"),panooptions1)
+        // map1.setStreetView(panorama)
+        
+        map2 = new google.maps.Map(document.getElementById("map-canvas2"),mapoptions2)
+        createMarker(address2, map2, "Clarksburg Community Church")
+        var panooptions2 = {
+        position: address2,
+        pov: {heading: 10, pitch: 9}
+        }
+        // var panorama = new google.maps.StreetViewPanorama(document.getElementById("pano2"),panooptions2)
+        // map2.setStreetView(panorama)
+    }
+    google.maps.event.addDomListener(window, "load", initialize)
+</script>
 </head>
 <body>
 <div id='header'>
@@ -17,8 +56,8 @@
 <div id = 'navbar'>
 	<ul>
 		<li id = 'home' class = 'navitem'>Home</li>
-		<li id = 'videos' class = 'navitem'>Videos</li>
 		<li id = 'lesson' class = 'navitem'>Lesson Schedule</li>
+		<li id = 'videos' class = 'navitem'>Videos</li>
 		<li id = 'mp' class = 'navitem'>MP3 Files</li>
 		<li id = 'contact' class = 'navitem'>Contact Me</li>
 		<!-- <li class = 'navitem'>  </li>
