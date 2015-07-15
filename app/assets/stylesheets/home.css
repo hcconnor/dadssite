@@ -46,7 +46,7 @@ lessonSchedule
     margin: auto;
     width: 50%;
 }
-#map-canvas1, #map-canvas2 
+#map-canvas1, #map-canvas2, #homeimage
 /*#pano1, #pano2*/
 {
     display:inline-block;
