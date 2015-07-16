@@ -1,6 +1,17 @@
+#content{
+    margin: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:70%;
+    background: #F7F7F7;
+    padding: 25px 0px 25px 0px;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;
+}
 .title{
     font-size: 35px;
     margin: 20px;
+    margin-top:0px;
 }
 .body{
     font-size: 20px;
@@ -14,7 +25,7 @@
 #intro{
     margin: auto;
     margin-top: 20px;
-    width:50%;
+    width:60%;
     text-align:left;
 }
 #practice-link{
