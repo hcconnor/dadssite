@@ -64,6 +64,10 @@
 		<li class = 'navitem'>  </li> -->
 	</ul>
 </div>
+
+<% if flash[:notice] %>
+    <p><%= notice %></p>
+<% end %>
 <%= yield %>
 
 </body>

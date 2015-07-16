@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   match '/lessonschedule', to: 'welcome#lesson',  via:'get'
   match '/mp3files', to: 'welcome#mp',            via:'get'
   match '/contactme', to: 'welcome#contact',      via:'get'
+  match '/contactme', to: 'welcome#sendemail',     via: 'post'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,1 +1,13 @@
 contact info
+<%= form_for :contact_me_form, url: contactme_path do |f| %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true %>
+
+  <%= f.label :email %><br />
+  <%= f.email_field :email%>
+
+  <%= f.label :message %><br />
+  <%= f.text_area :message_body%>
+
+  <%= f.submit "Send email" %>
+<% end %>
