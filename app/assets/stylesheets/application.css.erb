@@ -89,38 +89,43 @@ a:visited{
 	display: inline-block;
 }
 #navbar li:hover{
-	background-color: #005f5f;
+	background-color: #E27575;
 	cursor: pointer;
 }
 #navbar li:active{
 	background-color: #FFF;
 	color: #000;
 }
-.notification-container{
+.notification-container, .error-container{
 	position:fixed;
 	left:50%;
 }
 .notice, .error{
 	left:-50%;
-	
 	border-radius:3px;
-	
 	padding: 10px;
 	display:inline-block;
 	color: #4F8A10;
 	position:relative;
 	margin:auto;
-	animation: fadeOut 3s linear forwards;
 }
 .notice{
 	border:1px solid green;
 	background-color: #DFF2BF;
 	color: #4F8A10;
+	animation: fadeOut 3s linear forwards;
 }
 .error{
 	border:1px solid red;
 	background-color: #FFBABA;
 	color: #D8000C;
+	text-align:left;
+	animation: fadeOut 5s linear forwards;
+}
+.error ul{
+	list-style:none;
+	padding:0px;
+	margin:0px;
 }
 @keyframes fadeOut{
 	0% {opacity: 0;}

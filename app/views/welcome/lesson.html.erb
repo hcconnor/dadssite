@@ -1,5 +1,45 @@
 <% title "Lesson Schedule" %>
-<div id = "lessonimage">
-        <%= image_tag "violin lesson.jpg"%>
+<div id = "content">
+
+<div id = "week-title" class = "title">
+    Lesson Schedule
 </div>
-<%= render partial: 'layouts/locations'%>
+<div id= "week" class = "body">
+    <table align = "center">
+        <tr>
+            <th>
+                Sunday
+            </th>
+            <th>
+                Monday
+            </th>
+            <th>
+                Tuesday
+            </th>
+            <th>
+                Wednesday
+            </th>
+            <th>
+                Thursday
+            </th>
+            <th>
+                Friday
+            </th>
+            <th>
+                Saturday
+            </th>
+        </tr>
+        <tr>
+            <td>Pease Conservatory</td>
+            <td>Clarksburg Community Church</td>
+            <td>Music Institute of Roseville</td>
+            <td>Clarksburg Community Church</td>
+            <td>e</td>
+            <td>f</td>
+            <td>g</td>
+        </tr>
+    </table>
+</div>
+
+<%= render partial: 'layouts/locations' %>
+</div>

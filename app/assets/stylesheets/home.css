@@ -7,6 +7,7 @@
     padding: 25px 0px 25px 0px;
     text-shadow: 1px 1px 1px #FFF;
     border:1px solid #E4E4E4;
+    box-shadow: 2px 4px 5px darkgrey;
 }
 .title{
     font-size: 35px;
@@ -41,6 +42,9 @@
     padding: 5px;
     border-collapse: collapse;
     border: 2px solid;
+}
+#ratessub{
+    font-size: 13px;
 }
 #ratesinfo{
     margin: auto;

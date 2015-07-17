@@ -1,5 +1,17 @@
 <% title "Contact Me" %>
-<%= form_for :contact_me_form, url: contactme_path do |f| %>
+<%= form_for @message, url: contactme_path do |f| %>
+  <% if @message.errors.any? %>
+    <div class="error-container">
+      <div class="error">
+        <ul>
+          <% @message.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  
   <div class = "form">
     <h1>Contact Form</h1>
     <div class="form-field">

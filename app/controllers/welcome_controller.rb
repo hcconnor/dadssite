@@ -8,14 +8,15 @@ class WelcomeController < ApplicationController
 	def mp
 	end
 	def contact
+		@message = ContactMe.new
 	end
 	def sendemail
 		
-		message = ContactMe.new(params[:contact_me_form])
-  		if message.deliver
+		@message = ContactMe.new(params[:contact_me])
+  		if @message.deliver
 			redirect_to contactme_path, :notice => 'Email has been sent.'
 		else
-    		redirect_to contactme_path, :alert => 'Email could not be sent.'
+    		render "contact"
 		end
 	end
 end
