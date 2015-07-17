@@ -15,7 +15,7 @@ class WelcomeController < ApplicationController
   		if message.deliver
 			redirect_to contactme_path, :notice => 'Email has been sent.'
 		else
-    		redirect_to contactme_path, :notice => 'Email could not be sent.'
+    		redirect_to contactme_path, :alert => 'Email could not be sent.'
 		end
 	end
 end
